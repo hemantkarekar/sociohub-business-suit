@@ -9,6 +9,10 @@
 
 
 
+// Custom variables
+@import '../theme-light/variables';
+@import './variables';
+
 
 // Bootstrap stylesheets
 @import "bootstrap/scss/functions";
@@ -55,10 +59,6 @@
 @import '../common/utilities';
 @import "bootstrap/scss/utilities/api";
 
-
-// Custom variables
-@import '../theme-light/variables';
-@import './variables';
 
 // Custom mixins
 @import '../common/mixins/animation';

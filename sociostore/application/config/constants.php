@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-defined('APP_NAME') OR define('APP_NAME', 'SocioClick');
+defined('APP_NAME') OR define('APP_NAME', 'SocioStore');
 /*
 |--------------------------------------------------------------------------
 | Display Debug backtrace
