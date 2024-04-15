@@ -47,6 +47,15 @@
 						<li class="nav-item">
 							<a href="pages/email/read.html" class="nav-link">Inventory</a>
 						</li>
+						<li class="nav-item">
+							<a href="pages/email/read.html" class="nav-link">Categories</a>
+						</li>
+						<li class="nav-item">
+							<a href="pages/email/read.html" class="nav-link">Brands</a>
+						</li>
+						<li class="nav-item">
+							<a href="pages/email/read.html" class="nav-link">Reviews</a>
+						</li>
 					</ul>
 			</li>
 			<li class="nav-item">
