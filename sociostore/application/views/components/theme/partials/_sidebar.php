@@ -54,7 +54,7 @@
 							<a href="pages/email/read.html" class="nav-link">Brands</a>
 						</li>
 						<li class="nav-item">
-							<a href="pages/email/read.html" class="nav-link">Reviews</a>
+							<a href="pages/email/read.html" class="nav-link">Inventory</a>
 						</li>
 					</ul>
 			</li>
