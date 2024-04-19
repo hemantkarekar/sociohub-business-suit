@@ -46,7 +46,7 @@
 <!-- Plugin: JQuery select2 -->
 <script type="text/javascript" src="<?= base_url("assets") ?>/vendors/select2/select2.min.js"></script>
 <link rel="stylesheet" type="text/css" href="<?= base_url("assets") ?>/vendors/select2/select2.min.css" />
-<!-- Plugin: JQuery daterangepicker  -->
+<!-- Plugin: JQuery select2 -->
 
 <!-- inject:css -->
 <link rel="stylesheet" href="<?= base_url("assets") ?>/fonts/feather-font/css/iconfont.css">

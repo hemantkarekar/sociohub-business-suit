@@ -13,7 +13,7 @@ class LeadsModel extends CI_Model
     {
 		$this->db->select(['name', 'email', 'contact', 'source_url', 'created_at']);
 		$this->db->order_by('created_at', 'DESC');
-        $this->result = $this->db->get('web_form_appointments')->result_array();
+        $this->result = $this->db->get('registrations')->result_array();
         return json_encode($this->result);
     }
 }

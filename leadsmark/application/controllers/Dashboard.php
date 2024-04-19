@@ -26,8 +26,10 @@ class Dashboard extends CI_Controller
     }
     public function index()
     {
-        
-        $this->load->admin_dashboard('dashboard/index');
+        $this->load->model('data/CampaignsModel', 'CampaignsModel');
+        echo "<pre>";
+        print_r(json_decode($this->CampaignsModel->get(['utm_source','utm_medium','utm_campaign']), true));
+        echo "</pre>";
     }
 
     public function login()
