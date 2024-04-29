@@ -23,13 +23,37 @@ class Dashboard extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        if (!isset($_SESSION['leadsmark_user'])) {
+           redirect(base_url('login'));
+        }
     }
     public function index()
     {
         $this->load->model('data/CampaignsModel', 'CampaignsModel');
+        // echo "<pre>";
+        // print_r(json_decode($this->CampaignsModel->get(['utm_source','utm_medium','utm_campaign']), true));
+        // echo "</pre>";
+        $data = [
+            'page' => [
+                'title' => "Dashboard". " • " . APP_NAME
+            ]
+        ];
+        $this->load->admin_dashboard('dashboard/index', $data);
+    }
+
+    public function all_leads()
+    {
+        $this->load->model('data/LeadsModel', 'LeadsModel');
         echo "<pre>";
-        print_r(json_decode($this->CampaignsModel->get(['utm_source','utm_medium','utm_campaign']), true));
+        print_r(json_decode($this->LeadsModel->get(null), true));
         echo "</pre>";
+        die;
+        $data = [
+            'page' => [
+                'title' => "All Leads". " • " . APP_NAME
+            ]
+        ];
+        $this->load->admin_dashboard('dashboard/leads/home', $data);
     }
 
     public function login()

@@ -68,6 +68,7 @@ $route['api-category/(:any)/edit'] = 'MenuController/category_edit/$1';
 $route['register'] = 'dashboard/register';
 
 $route[''] = 'dashboard/index';
+$route['leads'] = 'dashboard/all_leads';
 $route['menu'] = 'dashboard/menu_master';
 $route['menu/categories'] = 'dashboard/categories_all';
 $route['menu/category/(:any)/menu-items'] = 'dashboard/menu_items/$1';
