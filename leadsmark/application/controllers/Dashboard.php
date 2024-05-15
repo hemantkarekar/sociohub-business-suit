@@ -24,18 +24,27 @@ class Dashboard extends CI_Controller
     {
         parent::__construct();
         if (!isset($_SESSION['leadsmark_user'])) {
-           redirect(base_url('login'));
+            redirect(base_url('login'));
         }
     }
     public function index()
     {
         $this->load->model('data/CampaignsModel', 'CampaignsModel');
+        $this->load->model('data/VisualizationModel', 'VisualizationModel');
         // echo "<pre>";
         // print_r(json_decode($this->CampaignsModel->get(['utm_source','utm_medium','utm_campaign']), true));
         // echo "</pre>";
         $data = [
             'page' => [
-                'title' => "Dashboard". " • " . APP_NAME
+                'title' => "Dashboard" . " • " . APP_NAME
+            ],
+            'charts' => [
+                'line' => [
+                    'growth' => $this->VisualizationModel->load('line')
+                ],
+                'bar' => [
+                    'orders' => $this->VisualizationModel->load('bar')
+                ]
             ]
         ];
         $this->load->admin_dashboard('dashboard/index', $data);
@@ -50,7 +59,7 @@ class Dashboard extends CI_Controller
         die;
         $data = [
             'page' => [
-                'title' => "All Leads". " • " . APP_NAME
+                'title' => "All Leads" . " • " . APP_NAME
             ]
         ];
         $this->load->admin_dashboard('dashboard/leads/home', $data);
@@ -60,14 +69,12 @@ class Dashboard extends CI_Controller
     {
         $data = [
             'page' => [
-                'title' => "Login Page". " • " . APP_NAME
+                'title' => "Login Page" . " • " . APP_NAME
             ]
         ];
         $this->load->view('pages/login', $data);
     }
     public function register()
     {
-        
     }
 }
-                      

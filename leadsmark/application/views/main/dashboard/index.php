@@ -1,5 +1,4 @@
 <div class="page-content">
-
   <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
     <div>
       <h4 class="mb-3 mb-md-0">Welcome to Dashboard</h4>
@@ -87,7 +86,13 @@
                   </div>
                 </div>
                 <div class="col-6 col-md-12 col-xl-7">
-                  <div id="ordersChart" class="mt-md-3 mt-xl-0"></div>
+                  <?php
+                  $data['props'] = [
+                    'height' => 60
+                  ];
+                  $data['options'] =  $charts['bar']['orders'];
+                  $this->load->view('widgets/minicharts/bar', $data);
+                  ?>
                 </div>
               </div>
             </div>
@@ -122,7 +127,13 @@
                   </div>
                 </div>
                 <div class="col-6 col-md-12 col-xl-7">
-                  <div id="growthChart" class="mt-md-3 mt-xl-0"></div>
+                  <?php
+                  $data['props'] = [
+                    'height' => 60
+                  ];
+                  $data['options'] =  $charts['bar']['orders'];
+                  $this->load->view('widgets/minicharts/line', $data);
+                  ?>
                 </div>
               </div>
             </div>

@@ -1,23 +1,20 @@
+var colors = {
+  primary        : "#106c97",
+  secondary      : "#7987a1",
+  success        : "#05a34a",
+  info           : "#66d1d1",
+  warning        : "#fbbc06",
+  danger         : "#ff3366",
+  light          : "#e9ecef",
+  dark           : "#060c17",
+  muted          : "#7987a1",
+  gridBorder     : "rgba(77, 138, 240, .15)",
+  bodyColor      : "#000",
+  cardBg         : "#fff"
+}
+
 $(function() {
   'use strict'
-
-
-
-  var colors = {
-    primary        : "#106c97",
-    secondary      : "#7987a1",
-    success        : "#05a34a",
-    info           : "#66d1d1",
-    warning        : "#fbbc06",
-    danger         : "#ff3366",
-    light          : "#e9ecef",
-    dark           : "#060c17",
-    muted          : "#7987a1",
-    gridBorder     : "rgba(77, 138, 240, .15)",
-    bodyColor      : "#000",
-    cardBg         : "#fff"
-  }
-
   var fontFamily = "'Roboto', Helvetica, sans-serif"
 
   var revenueChartData = [
@@ -267,34 +264,7 @@ $(function() {
 
 
   // Growth Chart
-  if($('#growthChart').length) {
-    var options3 = {
-      chart: {
-        type: "line",
-        height: 60,
-        sparkline: {
-          enabled: !0
-        }
-      },
-      series: [{
-        name: '',
-        data: [41, 45, 44, 46, 52, 54, 43, 74, 82, 82, 89]
-      }],
-      xaxis: {
-        type: 'datetime',
-        categories: ["Jan 01 2022", "Jan 02 2022", "Jan 03 2022", "Jan 04 2022", "Jan 05 2022", "Jan 06 2022", "Jan 07 2022", "Jan 08 2022", "Jan 09 2022", "Jan 10 2022", "Jan 11 2022",],
-      },
-      stroke: {
-        width: 2,
-        curve: "smooth"
-      },
-      markers: {
-        size: 0
-      },
-      colors: [colors.primary],
-    };
-    new ApexCharts(document.querySelector("#growthChart"),options3).render();
-  }
+  
   // Growth Chart - END
 
 
