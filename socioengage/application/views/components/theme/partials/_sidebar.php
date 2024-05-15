@@ -11,13 +11,13 @@
 	</div>
 	<div class="sidebar-body">
 		<ul class="nav">
-			<li class="nav-item">
-				<a href="dashboard.html" class="nav-link">
+			<li class="nav-item <?= link_is_active("") ?>">
+				<a href="<?= base_url() ?>" class="nav-link">
 					<i class="link-icon" data-feather="box"></i>
 					<span class="link-title">Dashboard</span>
 				</a>
 			</li>
-
+			
 			<!-- Nominations -->
 			<li class="nav-item nav-category">Nominations Management</li>
 			<!-- Access Level: jury -->
@@ -63,7 +63,7 @@
 
 			<li class="nav-item">
 				<a href="dashboard.html" class="nav-link">
-				<i class="link-icon" data-feather="users"></i>
+					<i class="link-icon" data-feather="users"></i>
 					<span class="link-title">Users</span>
 				</a>
 			</li>

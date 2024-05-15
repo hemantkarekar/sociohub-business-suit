@@ -57,13 +57,8 @@ $route['logout'] = 'auth/logout';
 $route['api-auth-login'] = 'auth/login';
 $route['api-auth-register'] = 'auth/register';
 
-$route['api-menu-item/new'] = 'MenuController/menu_item_add';
-$route['api-menu-item/(:any)/delete'] = 'MenuController/menu_item_delete/$1';
-$route['api-menu-item/(:any)/edit'] = 'MenuController/menu_item_edit/$1';
-
-$route['api-category/new'] = 'MenuController/category_add';
-$route['api-category/(:any)/delete'] = 'MenuController/category_delete/$1';
-$route['api-category/(:any)/edit'] = 'MenuController/category_edit/$1';
+$route['api-event-register'] = 'EventsController/api_event_register';
+$route['check-in/(:any)'] = 'EventsController/check_in_verify/$1';
 
 $route['register'] = 'dashboard/register';
 

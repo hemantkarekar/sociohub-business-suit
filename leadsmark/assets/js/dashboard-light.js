@@ -4,7 +4,7 @@ $(function() {
 
 
   var colors = {
-    primary        : "#ff4136",
+    primary        : "#106c97",
     secondary      : "#7987a1",
     success        : "#05a34a",
     info           : "#66d1d1",
