@@ -6,7 +6,7 @@ class ApplicationModel extends CI_Model
     public function __construct()
     {
         parent::__construct();
-        $this->active_table = (in_array('registrations', $this->db->list_tables())? 'registrations':'');
+        $this->active_table = (in_array('ldm_vcdojtxev66laxb1_web_form_appointments', $this->db->list_tables())? 'ldm_vcdojtxev66laxb1_web_form_appointments':'');
     }
 
     public function get($columns= null, $where = null){

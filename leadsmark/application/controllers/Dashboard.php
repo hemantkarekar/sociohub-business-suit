@@ -53,14 +53,15 @@ class Dashboard extends CI_Controller
     public function all_leads()
     {
         $this->load->model('data/LeadsModel', 'LeadsModel');
-        echo "<pre>";
-        print_r(json_decode($this->LeadsModel->get(null), true));
-        echo "</pre>";
-        die;
+        // echo "<pre>";
+        // print_r(json_decode($this->LeadsModel->get(null), true));
+        // echo "</pre>";
+        // die;
         $data = [
             'page' => [
                 'title' => "All Leads" . " • " . APP_NAME
-            ]
+            ],
+            'data' => json_decode($this->LeadsModel->get(null), true)
         ];
         $this->load->admin_dashboard('dashboard/leads/home', $data);
     }

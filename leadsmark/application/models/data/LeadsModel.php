@@ -6,7 +6,7 @@ class LeadsModel extends CI_Model
     public function __construct()
     {
         parent::__construct();
-        $this->table = (in_array('registrations', $this->db->list_tables())? 'registrations': null);
+        $this->table = (in_array('ldm_vcdojtxev66laxb1_web_form_appointments', $this->db->list_tables())? 'ldm_vcdojtxev66laxb1_web_form_appointments': null);
     }
 
     public function get($columns= null, $where = null){

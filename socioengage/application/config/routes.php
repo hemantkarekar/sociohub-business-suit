@@ -58,7 +58,7 @@ $route['api-auth-login'] = 'auth/login';
 $route['api-auth-register'] = 'auth/register';
 
 $route['api-event-register'] = 'EventsController/api_event_register';
-$route['check-in/(:any)'] = 'EventsController/check_in_verify/$1';
+$route['event/(:any)/check-in/(:any)'] = 'EventsController/check_in_verify/$1/$2';
 
 $route['register'] = 'dashboard/register';
 

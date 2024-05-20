@@ -47,17 +47,17 @@
 						</div>
 						<div class="col-3 text-center">
 							<a href="<?= base_url("") ?>pages/apps/calendar.html" class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i data-feather="calendar" class="icon-lg mb-1"></i>
-								<p class="tx-12">Calendar</p>
+								<p class="tx-12">Events</p>
 							</a>
 						</div>
 						<div class="col-3 text-center">
 							<a href="<?= base_url("") ?>pages/email/inbox.html" class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i data-feather="mail" class="icon-lg mb-1"></i>
-								<p class="tx-12">Email</p>
+								<p class="tx-12">Campaigns</p>
 							</a>
 						</div>
 						<div class="col-3 text-center">
 							<a href="<?= base_url("") ?>pages/general/profile.html" class="dropdown-item d-flex flex-column align-items-center justify-content-center wd-70 ht-70"><i data-feather="instagram" class="icon-lg mb-1"></i>
-								<p class="tx-12">Profile</p>
+								<p class="tx-12">ORM</p>
 							</a>
 						</div>
 					</div>
