@@ -4840,12 +4840,12 @@ div.tox .btn-group-vertical > .btn-group:not(:first-child) > .tox-button,
 }
 
 .alert-primary {
-  --bs-alert-color: #3d4499;
+  --bs-alert-color: var(--bs-primary);
   --bs-alert-bg: #e0e3ff;
   --bs-alert-border-color: #d1d4ff;
 }
 .alert-primary .alert-link {
-  color: #31367a;
+  color: var(--bs-primary);
 }
 
 .alert-secondary {
@@ -20177,11 +20177,11 @@ a.badge:hover {
 
 .alert-primary {
   background-color: rgba(16, 108, 151, 0.1);
-  color: #4c59ff;
+  color: var(--bs-primary);
   border-color: rgba(16, 108, 151, 0.2);
 }
 .alert-primary .alert-link {
-  color: #4c59ff;
+  color: var(--bs-primary);
 }
 .alert-primary svg {
   width: 19px;
