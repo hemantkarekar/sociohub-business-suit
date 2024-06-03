@@ -11,7 +11,14 @@ class MY_Loader extends CI_Loader
 	public function admin_dashboard($view, $vars = array(), $return = FALSE)
 	{
 		$this->view('layout/_1', $vars);
-		$this->view("main/" . $view, $vars);
+		$this->view("main/dashboard/admin/" . $view, $vars);
+		$this->view('layout/_2', $vars);
+	}
+
+	public function employee_dashboard($view, $vars = array(), $return = FALSE)
+	{
+		$this->view('layout/_1', $vars);
+		$this->view("main/dashboard/employee/" . $view, $vars);
 		$this->view('layout/_2', $vars);
 	}
 	

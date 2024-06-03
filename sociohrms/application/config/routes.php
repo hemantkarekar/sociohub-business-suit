@@ -51,21 +51,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'Dashboard';
 
-$route['login'] = 'pages/login';
+$route['login'] = 'Dashboard/login';
 $route['logout'] = 'auth/logout';
 
-$route['api-auth-login'] = 'auth/login';
+$route['payslips'] = 'PayrollController/payslips';
+$route['payslip/(:any)'] = 'PayrollController/payslip_single/$1';
+
+$route['api/auth-login'] = 'api/AuthController/login';
 $route['api-auth-register'] = 'auth/register';
 
-$route['api-event-register'] = 'EventsController/api_event_register';
-$route['event/(:any)/check-in/(:any)'] = 'EventsController/check_in_verify/$1/$2';
+$route['api/salary-slip/import'] = 'api/SalarySlipController/import_csv';
+$route['api/salary-slip/generate'] = 'api/SalarySlipController/bulk_generate';
+$route['api/salary-slip/bulk-generate'] = 'api/SalarySlipController/make_pdf';
 
-$route['register'] = 'dashboard/register';
+$route['register'] = 'Dashboard/register';
 
-$route[''] = 'dashboard/index';
-$route['menu'] = 'dashboard/menu_master';
-$route['menu/categories'] = 'dashboard/categories_all';
-$route['menu/category/(:any)/menu-items'] = 'dashboard/menu_items/$1';
+$route[''] = 'Dashboard/index';
+$route['menu'] = 'Dashboard/menu_master';
+$route['menu/categories'] = 'Dashboard/categories_all';
+$route['menu/category/(:any)/menu-items'] = 'Dashboard/menu_items/$1';
 
 
 $route['404_override'] = '';

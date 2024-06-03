@@ -13,11 +13,7 @@
 		</form>
 		<ul class="navbar-nav">
 			<li class="nav-item">XXX.XXX.XXX.XXX</li>
-			<li class="nav-item">
-				<button id="startTour" class="btn nav-link">
-					<i data-feather="help-circle"></i>
-				</button>
-			</li>
+			
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					<i class="flag-icon flag-icon-us mt-1" title="us"></i> <span class="ms-1 me-1 d-none d-md-inline-block">English</span>
@@ -206,6 +202,11 @@
 					</div>
 				</div>
 			</li>
+			<li class="nav-item">
+				<button id="startTour" class="btn nav-link">
+					<i data-feather="help-circle"></i>
+				</button>
+			</li>
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					<img class="wd-30 ht-30 rounded-circle" src="https://placehold.co/30x30" alt="profile">
@@ -218,6 +219,7 @@
 						<div class="text-center">
 							<p class="tx-16 fw-bolder">Amiah Burton</p>
 							<p class="tx-12 text-muted">amiahburton@gmail.com</p>
+							<p class="tx-12 text-muted"><?= $this->session->user['role'] ?></p>
 						</div>
 					</div>
 					<ul class="list-unstyled p-1">

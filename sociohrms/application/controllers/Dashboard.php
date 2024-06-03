@@ -4,21 +4,30 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Dashboard extends CI_Controller
 {
 	public $error;
+	public $session_data;
 
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('UserModel');
 		$this->error = [];
 	}
 	public function index()
 	{
-		switch ($this->input->get('type')) {
-			case 'nominations':
-				$this->load->admin_dashboard('dashboard/nominations/index');
+		// echo $this->UserModel->get_role();
+		switch ($this->UserModel->get_role()) {
+			case 'admin':
+				$this->load->admin_dashboard('index');
+				break;
+			case 'hr':
+				$this->load->admin_dashboard('index');
+				break;
+			case 'employee':
+				$this->load->employee_dashboard('index');
 				break;
 
 			default:
-				$this->load->admin_dashboard('dashboard/basic/index');
+				echo "ERROR!";
 				break;
 		}
 	}
@@ -30,7 +39,7 @@ class Dashboard extends CI_Controller
 				'title' => "Login Page" . " • " . APP_NAME
 			]
 		];
-		$this->load->view('pages/login', $data);
+		$this->load->mini_layout('pages/login', $data);
 	}
 	public function register()
 	{

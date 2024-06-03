@@ -34,8 +34,8 @@
 									<input type="text" class="form-control" id="inputTitle">
 								</div>
 								<div class="mb-3">
-									<label for="inputContent" class="form-label">Post Content</label>
-									<textarea class="form-control" id="inputContent"></textarea>
+									<label for="inputPostContent" class="form-label">Post Contents</label>
+									<textarea class="form-control full-editor" id="inputPostContent" rows="10"></textarea>
 								</div>
 							</div>
 						</div>
@@ -50,7 +50,7 @@
 									</div>
 								</div>
 								<div class="mb-3">
-									<textarea class="form-control" id="inputExerpt"></textarea>
+									<textarea class="form-control mini-editor" id="inputExerpt"></textarea>
 								</div>
 							</div>
 						</div>
@@ -70,7 +70,7 @@
 								</div>
 								<div class="mb-3">
 									<label for="inputSEOPageDesc" class="form-label">Description</label>
-									<textarea class="form-control" id="inputSEOPageDesc"></textarea>
+									<textarea class="form-control mini-editor" maxlength="300" id="inputSEOPageDesc"></textarea>
 								</div>
 								<div class="mb-3">
 									<label for="inputSEOPageURL" class="form-label">Page URL</label>

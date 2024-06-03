@@ -1,4 +1,14 @@
 <div class="page-content">
+  <div class="">
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Holy guacamole!</strong> Your Leave Request for <strong>24th June 2024</strong> has been Approved!!!
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Holy guacamole!</strong> Your Leave Request for <strong>24th June 2024</strong> has been Approved!!!
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  </div>
 
   <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
     <div>
@@ -109,7 +119,7 @@
                       <div class="btn btn-primary text-white p-2"><i data-feather="calendar" class="h1"></i></div>
                     </div>
                     <div class="col-lg col-12">
-                      <h5>Ramzan (<?= date('F j, Y') ?>)</h5>
+                      <h5>Lorem, ipsum dolor. (<?= date('F j, Y') ?>)</h5>
                       <p>Lorem ipsum dolor sit.</p>
                     </div>
                     <div class="col-lg-auto col-12">
@@ -124,64 +134,91 @@
       </div>
     </div>
     <div class="col-md-4 grid-margin">
-      <div class="card">
-        <div class="card-body">
-          <div class="d-flex justify-content-between align-items-baseline mb-3">
-            <h6 class="card-title mb-0">Attendance & Leaves</h6>
-            <div>
-              <select name="" id="select2LeavePeriod" class="">
-                <option value="">-- Select Year --</option>
-                <option value="">2024</option>
-                <option value="">2023</option>
-                <option value="">2022</option>
-              </select>
-              <script>
-                $("#select2LeavePeriod").select2({
-                  theme: "bootstrap-5",
-                });
-              </script>
+      <div class="row">
+        <div class="col-12 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-baseline mb-3">
+                <h6 class="card-title mb-0">Attendance & Leaves</h6>
+                <div>
+                  <select name="" id="select2LeavePeriod" class="">
+                    <option value="">-- Select Year --</option>
+                    <option value="">2024</option>
+                    <option value="">2023</option>
+                    <option value="">2022</option>
+                  </select>
+                  <script>
+                    $("#select2LeavePeriod").select2({
+                      theme: "bootstrap-5",
+                    });
+                  </script>
+                </div>
+              </div>
+              <div class="row g-3 mb-3">
+                <div class="col-xl-4 col-12">
+                  <div class="">
+                    <h3 class="text-primary">90</h3>
+                    <p>Lorem, ipsum dolor.</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-12">
+                  <div class="">
+                    <h3 class="text-primary">90</h3>
+                    <p>Lorem, ipsum dolor.</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-12">
+                  <div class="">
+                    <h3 class="text-primary">90</h3>
+                    <p>Lorem, ipsum dolor.</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-12">
+                  <div class="">
+                    <h3 class="text-primary">90</h3>
+                    <p>Lorem, ipsum dolor.</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-12">
+                  <div class="">
+                    <h3 class="text-primary">90</h3>
+                    <p>Lorem, ipsum dolor.</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-12">
+                  <div class="">
+                    <h3 class="text-primary">90</h3>
+                    <p>Lorem, ipsum dolor.</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <a class="btn btn-primary btn-icon-text" href="">Apply for a Leave<i data-feather="arrow-right" class="icon-sm mb-1 btn-icon-append"></i></a>
+              </div>
             </div>
           </div>
-          <div class="row g-3 mb-3">
-            <div class="col-xl-4 col-12">
-              <div class="">
-                <h3 class="text-primary">90</h3>
-                <p>Lorem, ipsum dolor.</p>
+        </div>
+        <div class="col-12 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-baseline mb-2">
+                <h6 class="card-title mb-0">Working Hours</h6>
+                <div>
+                  <select name="" id="select2GraphPeriod" class="form-control-sm">
+                    <option value="">-- Select Duration --</option>
+                    <option value="">Today</option>
+                    <option value="">Last Month</option>
+                    <option value="">Quarterly</option>
+                  </select>
+                  <script>
+                    $("#select2GraphPeriod").select2({
+                      theme: "bootstrap-5",
+                    });
+                  </script>
+                </div>
               </div>
+              <div class="" style="height: 200px;"></div>
             </div>
-            <div class="col-xl-4 col-12">
-              <div class="">
-                <h3 class="text-primary">90</h3>
-                <p>Lorem, ipsum dolor.</p>
-              </div>
-            </div>
-            <div class="col-xl-4 col-12">
-              <div class="">
-                <h3 class="text-primary">90</h3>
-                <p>Lorem, ipsum dolor.</p>
-              </div>
-            </div>
-            <div class="col-xl-4 col-12">
-              <div class="">
-                <h3 class="text-primary">90</h3>
-                <p>Lorem, ipsum dolor.</p>
-              </div>
-            </div>
-            <div class="col-xl-4 col-12">
-              <div class="">
-                <h3 class="text-primary">90</h3>
-                <p>Lorem, ipsum dolor.</p>
-              </div>
-            </div>
-            <div class="col-xl-4 col-12">
-              <div class="">
-                <h3 class="text-primary">90</h3>
-                <p>Lorem, ipsum dolor.</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <a class="btn btn-primary btn-icon-text" href="">Apply for a Leave<i data-feather="arrow-right" class="icon-sm mb-1 btn-icon-append"></i></a>
           </div>
         </div>
       </div>
@@ -189,31 +226,31 @@
     <div class="col-md-4 grid-margin">
       <div class="card">
         <div class="card-body">
-          <div class="d-flex justify-content-between align-items-baseline">
-            <h6 class="card-title mb-0">New Nominations</h6>
-            <div class="dropdown mb-2">
-              <a type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="eye" class="icon-sm me-2"></i> <span class="">View</span></a>
-                <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="edit-2" class="icon-sm me-2"></i> <span class="">Edit</span></a>
-                <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="trash" class="icon-sm me-2"></i> <span class="">Delete</span></a>
-                <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer" class="icon-sm me-2"></i> <span class="">Print</span></a>
-                <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download" class="icon-sm me-2"></i> <span class="">Download</span></a>
-              </div>
-            </div>
+          <div class="d-flex justify-content-between align-items-baseline mb-3">
+            <h6 class="card-title mb-0">Important</h6>
+            <a class="btn p-0 btn-icon-text text-dark link-text" href="">View All<i data-feather="arrow-right" class="icon-sm mb-1 btn-icon-append"></i></a>
           </div>
+          <hr>
           <div class="row">
-            <div class="col-12">
-              <h3 class="mb-2">3,897</h3>
-              <div class="d-flex align-items-baseline">
-                <p class="text-success">
-                  <span>+3.3%</span>
-                  <i data-feather="arrow-up" class="icon-sm mb-1"></i>
-                </p>
-              </div>
-            </div>
+            <?php for ($i = 0; $i < 6; $i++) : ?>
+              <a href="" class="col-12 mb-3">
+                <div class="card">
+                  <div class="card-body py-3">
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+                        <div class="rounded-circle overflow-hidden">
+                          <img src="https://ui-avatars.com/api/?name=Vivek+Bandal" alt="" height="40">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <h5>Lorem ipsum dolor sit.</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            <?php endfor ?>
           </div>
         </div>
       </div>
