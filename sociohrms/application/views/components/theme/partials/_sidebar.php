@@ -10,6 +10,7 @@
 		</div>
 	</div>
 	<div class="sidebar-body">
+		<?php if (!in_array($this->uri->segment(1), ['onboarding'])) : ?>
 		<ul class="nav">
 			<li class="nav-item nav-category">Main</li>
 			<li class="nav-item <?= link_is_active("") ?>">
@@ -35,7 +36,6 @@
 			<!-- Access Level: HR, Admin -->
 			<?php if (in_array($this->session->user['role'], ['hr', 'admin'])) : ?>
 				<li class="nav-item nav-category">Employee Management</li>
-				<!-- Access Level: jury -->
 				<li class="nav-item <?= link_is_active("employee") ?>">
 					<a class="nav-link" data-bs-toggle="collapse" href="#employee" role="button" aria-expanded="false" aria-controls="employee">
 						<i class="link-icon" data-feather="users"></i>
@@ -48,24 +48,7 @@
 								<a href="#" class="nav-link <?= link_is_active("employees") ?>">All Employees</a>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="nav-link <?= link_is_active("departments") ?>">Add New Employee</a>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<li class="nav-item <?= link_is_active("departments") ?>">
-					<a class="nav-link" data-bs-toggle="collapse" href="#depts" role="button" aria-expanded="false" aria-controls="depts">
-						<i class="link-icon" data-feather="briefcase"></i>
-						<span class="link-title">Departments</span>
-						<i class="link-arrow" data-feather="chevron-down"></i>
-					</a>
-					<div class="collapse" id="depts">
-						<ul class="nav sub-menu">
-							<li class="nav-item">
-								<a href="#" class="nav-link <?= link_is_active("employees") ?>">All Departments</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link <?= link_is_active("departments") ?>">Add New Department</a>
+								<a href="#" class="nav-link <?= link_is_active("employees/new") ?>">Add New Employee</a>
 							</li>
 						</ul>
 					</div>
@@ -153,18 +136,63 @@
 
 			<!-- Access Level: admin -->
 			<?php if (in_array($this->session->user['role'], ['admin'])) : ?>
-				<li class="nav-item nav-category">User Management</li>
+				<li class="nav-item nav-category">Organization Management</li>
+				<li class="nav-item <?= link_is_active("departments") ?>">
+					<a class="nav-link" data-bs-toggle="collapse" href="#depts" role="button" aria-expanded="false" aria-controls="depts">
+						<i class="link-icon" data-feather="briefcase"></i>
+						<span class="link-title">Departments</span>
+						<i class="link-arrow" data-feather="chevron-down"></i>
+					</a>
+					<div class="collapse" id="depts">
+						<ul class="nav sub-menu">
+							<li class="nav-item">
+								<a href="#" class="nav-link <?= link_is_active("employees") ?>">All Departments</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link <?= link_is_active("departments") ?>">Add New Department</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="nav-item <?= link_is_active("designations") ?>">
+					<a class="nav-link" data-bs-toggle="collapse" href="#desigtn" role="button" aria-expanded="false" aria-controls="desigtn">
+						<i class="link-icon" data-feather="briefcase"></i>
+						<span class="link-title">Designations</span>
+						<i class="link-arrow" data-feather="chevron-down"></i>
+					</a>
+					<div class="collapse" id="desigtn">
+						<ul class="nav sub-menu">
+							<li class="nav-item">
+								<a href="#" class="nav-link <?= link_is_active("designations") ?>">All Designations</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link <?= link_is_active("designations") ?>">Add New Designation</a>
+							</li>
+						</ul>
+					</div>
+				</li>
 				<li class="nav-item">
 					<a href="dashboard.html" class="nav-link">
 						<i class="link-icon" data-feather="users"></i>
 						<span class="link-title">Users</span>
 					</a>
 				</li>
-				<li class="nav-item">
-					<a href="dashboard.html" class="nav-link">
+				<li class="nav-item <?= link_is_active("organization") ?>">
+					<a class="nav-link" data-bs-toggle="collapse" href="#org" role="button" aria-expanded="false" aria-controls="org">
 						<i class="link-icon" data-feather="settings"></i>
-						<span class="link-title">Settings</span>
+						<span class="link-title">Organization</span>
+						<i class="link-arrow" data-feather="chevron-down"></i>
 					</a>
+					<div class="collapse" id="org">
+						<ul class="nav sub-menu">
+							<li class="nav-item">
+								<a href="#" class="nav-link <?= link_is_active("organization") ?>">Policies</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link <?= link_is_active("organization") ?>">Organization Settings</a>
+							</li>
+						</ul>
+					</div>
 				</li>
 
 				<li class="nav-item nav-category">Apps</li>
@@ -184,5 +212,6 @@
 				</a>
 			</li>
 		</ul>
+		<?php endif ?>
 	</div>
 </nav>

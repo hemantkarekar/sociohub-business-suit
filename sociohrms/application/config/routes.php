@@ -49,28 +49,62 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'Dashboard';
 
-$route['login'] = 'Dashboard/login';
-$route['logout'] = 'auth/logout';
+$route['default_controller'] = 'DashboardController';
 
-$route['payslips'] = 'PayrollController/payslips';
-$route['payslip/(:any)'] = 'PayrollController/payslip_single/$1';
-
+$route['logout'] = 'api/AuthController/logout';
 $route['api/auth-login'] = 'api/AuthController/login';
-$route['api-auth-register'] = 'auth/register';
+$route['api/auth-register'] = 'api/AuthController/register';
+$route['api/onboarding/proceed'] = 'api/OnboardingAPI/register';
 
 $route['api/salary-slip/import'] = 'api/SalarySlipController/import_csv';
 $route['api/salary-slip/generate'] = 'api/SalarySlipController/bulk_generate';
 $route['api/salary-slip/bulk-generate'] = 'api/SalarySlipController/make_pdf';
 
-$route['register'] = 'Dashboard/register';
+$route[''] = 'DashboardController/index';
 
-$route[''] = 'Dashboard/index';
-$route['menu'] = 'Dashboard/menu_master';
-$route['menu/categories'] = 'Dashboard/categories_all';
-$route['menu/category/(:any)/menu-items'] = 'Dashboard/menu_items/$1';
+$route['onboarding/home'] = 'OnboardingController/home';
+
+$route['login'] = 'DashboardController/login';
+$route['register'] = 'DashboardController/register';
 
 
+$route['attendance'] ='payroll/AttendanceController/self_attendance';
+$route['time-sheet'] ='payroll/AttendanceController/all_timesheet';
+$route['overtime'] ='payroll/AttendanceController/all_overtime';
+
+$route['employees'] ='employee/EmployeesController/all_employees';
+$route['employees/new'] ='employee/EmployeesController/new_single_employee';
+
+$route['leaves'] ='payroll/LeavesController/self_leaves';
+$route['leaves/all'] ='payroll/LeavesController/all_leaves';
+$route['leaves/pending'] ='payroll/LeavesController/leave_requests';
+
+$route['payslips'] = 'payroll/PayrollController/self_payslips';
+$route['payslip/(:any)'] = 'payroll/PayrollController/self_payslip_single/$1';
+$route['payroll'] = 'payroll/PayrollController/all_payroll';
+$route['payroll/new'] = 'payroll/PayrollController/new_payroll';
+
+$route['reimbursements'] = 'payroll/ReimbursementController/self_reimbursements';
+$route['reimbursements/all'] = 'payroll/ReimbursementController/all_reimbursements';
+$route['reimbursements/pending'] ='payroll/ReimbursementController/reimbursement_requests';
+
+$route['departments'] ='employee/DesignationDepartmentController/all_departments';
+$route['departments/new'] ='employee/DesignationDepartmentController/new_department';
+$route['designations'] ='employee/DesignationDepartmentController/all_designations';
+$route['designations/new'] ='employee/DesignationDepartmentController/new_designation';
+
+$route['policies'] = 'company/PoliciesController/self_policies';
+$route['policy/(:any)'] = 'company/PoliciesController/self_policy_single/$1';
+$route['policy/(:any)/edit'] = 'company/PoliciesController/policy_single_edit/$1';
+
+$route['settings'] = 'GeneralSettingsController/self_settings';
+$route['settings/app-settings/home'] = 'company/SettingsController/self_settings';
+$route['settings/all'] = 'company/SettingsController/all_settings_company';
+$route['settings/holidays'] = 'company/SettingsController/all_settings_holidays';
+
+$route['profile'] = 'company/UserProfileController/home';
+
+// $route[''] = '';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

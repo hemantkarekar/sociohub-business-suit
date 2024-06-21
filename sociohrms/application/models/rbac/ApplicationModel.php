@@ -1,6 +1,6 @@
 <?php
 
-class EmployeeModel extends CI_Model
+class ApplicationModel extends CI_Model
 {
     public $table;
     public $result;
@@ -10,9 +10,7 @@ class EmployeeModel extends CI_Model
         $this->table['users'] = 'app_application_users';
         $this->table['employees'] = 'app_company_employee';
     }
-
-    public function get($where = null, $what = null)
-    {
+    public function get($where = null, $columns = null){
         if (!is_null($where)) {
             $this->db->where($where);
         }
@@ -22,10 +20,5 @@ class EmployeeModel extends CI_Model
         $result = $this->db->get($this->table['users'])->result_array()[0];
         $this->result = $result;
         return $result;
-    }
-
-    public function authorize(array $request)
-    {
-        return ['status' => true];
     }
 }

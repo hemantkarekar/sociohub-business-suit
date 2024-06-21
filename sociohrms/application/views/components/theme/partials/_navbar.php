@@ -13,7 +13,62 @@
 		</form>
 		<ul class="navbar-nav">
 			<li class="nav-item">XXX.XXX.XXX.XXX</li>
-			
+			<li class="nav-item" style="width: 200px;">
+				<div class="actions w-100">
+					<form action="" class="nav-link">
+						<select name="" id="clientsSelect" class="form-control">
+							<option value="N1kpK954srINrkcp" data-origin="StemRx">StemRx Website</option>
+							<!-- <option value="wyj496iThHwgfU6w" data-origin="Sociomark">Sociomark - Digital Marketing Agency</option> -->
+						</select>
+					</form>
+				</div>
+				<script>
+					$("#clientsSelect").select2({
+						templateSelection: (state) => {
+							if (!state.id) {
+								return state.text;
+							}
+
+							var baseUrl = "/user/pages/images/flags";
+							var $state = $(
+								'<span><img class="select2_option-icon" />&nbsp;&nbsp;<span></span></span>'
+							);
+
+							// Use .text() instead of HTML string concatenation to avoid script injection issues
+							$state.find("span").text(state.text);
+							switch (state.element.getAttribute('data-origin').toLowerCase()) {
+								case 'stemrx':
+									$state.find("img").attr("src", "https://stemrx.in/assets/img/logo.png");
+									break;
+								default:
+									$state.find("img").attr("src", "https://www.newhorizonschools.org/assets/media/nhss_logo.png");
+									break;
+							}
+							return $state;
+						}
+					});
+
+					$("#clientsSelect").on('change', (event) => {
+						$.ajax({
+							data: {
+								'campaignId': $("#clientsSelect").val()
+							},
+							url: "<?= base_url() ?>",
+							success: (response) => {
+								location.reload();
+							},
+							error: (error) => {
+								console.log(error);
+							}
+						})
+					})
+				</script>
+				<style>
+					.select2_option-icon {
+						height: 20px;
+					}
+				</style>
+			</li>
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					<i class="flag-icon flag-icon-us mt-1" title="us"></i> <span class="ms-1 me-1 d-none d-md-inline-block">English</span>
