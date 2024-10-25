@@ -9,6 +9,45 @@ class BlogsController extends CI_Controller
 		parent::__construct();
 		$this->load->model('data/BlogsModel');
 		$this->load->model('data/AuthorsModel');
+		$this->data = null;
+	}
+
+	/* Get All Categories */
+	public function api_category_get()
+	{
+	}
+	/* Get Single Category */
+	public function api_category_get_single()
+	{
+	}
+	public function api_category_insert()
+	{
+		$form_data = $this->input->post();
+		$data = $form_data;
+		$this->load->model('blogposts/CategoryModel');
+		if ($this->CategoryModel->insert($data)) {
+			redirect($this->input->get_request_header('Referer'));
+		}
+	}
+	public function api_category_update()
+	{
+		$form_data = $this->input->post();
+		$data = $form_data;
+		$this->load->model('blogposts/CategoryModel');
+		if ($this->CategoryModel->insert($data)) {
+			redirect($this->input->get_request_header('Referer'));
+		}
+	}
+	public function api_tag_insert()
+	{
+		$form_data = $this->input->post();
+		$data = $form_data;
+		$tag = slugify($form_data['title']);
+		$data['uslug'] = $tag;
+		$this->load->model('blogposts/TagModel');
+		if ($this->TagModel->insert($data)) {
+			redirect($this->input->get_request_header('Referer'));
+		}
 	}
 
 	public function home()
@@ -44,15 +83,26 @@ class BlogsController extends CI_Controller
 		$this->load->admin_dashboard('blogs/home', $this->data);
 	}
 
-	public function new_post() {
+
+	public function new_post()
+	{
 		$this->load->admin_dashboard('blogs/new', $this->data);
 	}
 
-	public function edit($slug) {
+	// INSERT INTO `cms_posts`(`id`, `title`, `content`, `excerpt`, `image_url`, `category`, `tags`, `seo_title`, `seo_desc`, `seo_thumb`, `author_id`, `created_at`, `updated_at`, `uslug`, `views`, `status`)
+
+	public function edit($slug)
+	{
 		$this->load->admin_dashboard('blogs/edit', $this->data);
 	}
-	public function categories() {
-		
+
+	public function categories()
+	{
+		$this->load->model('blogposts/CategoryModel');
+		$this->load->model('blogposts/TagModel');
+		$this->data['categories'] = $this->CategoryModel->get();
+		$this->data['tags'] = $this->TagModel->get();
+		// print_r($this->data['tags']);die;
 		$this->load->admin_dashboard('blogs/categories', $this->data);
 	}
 }

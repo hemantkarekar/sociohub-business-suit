@@ -52,12 +52,18 @@
 											</div>
 										</div>
 										<div class="row m-0">
+											<div class="col-12 grid-margin">
+												<div class="">
+													<label for="formInput" class="form-label">Organization Name</label>
+													<input type="text" name="company_details[name]" id="formInput" class="form-control">
+												</div>
+											</div>
 											<div class="col-xl-4 col-lg-6 col-12 grid-margin">
 												<div class="">
 													<label for="select2CompanyType" class="form-label">Organization Type</label>
 													<select name="company_details[company_type]" id="select2CompanyType" class="form-select">
 														<option value="LLP">Limited Liability Partnership (LLP)</option>
-														<option value="LLP">Corporate Ownership</option>
+														<option value="Corporate Ownership">Corporate Ownership</option>
 														<option value="One Person Company">One Person Company</option>
 														<option value="Cooperatives">Cooperatives</option>
 														<option value="Private Limited Company">Private Limited Company</option>
@@ -377,7 +383,6 @@
 									},
 									onFinish: function() {
 										var formData = new FormData(document.getElementById("onboardingStepOneForm"))
-										console.log(formData);
 										var object = {};
 										formData.forEach((value, key) => object[key] = value);
 										object['auth_key'] = "<?= $this->input->get('key') ?>"
@@ -390,6 +395,7 @@
 												window.location.replace("<?= base_url('settings/app-settings/home') ?>")
 											},
 											error: (err) => {
+												console.log("AJAX Error");
 												console.log(err);
 											}
 										})

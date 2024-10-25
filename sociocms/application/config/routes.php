@@ -3,15 +3,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $route['default_controller'] = 'Dashboard';
 
-$route['login'] = 'pages/login';
-$route['logout'] = 'auth/logout';
+$route['login'] = 'oauth/AuthenticationController/login';
+$route['logout'] = 'oauth/AuthenticationController/logout';
+$route["api/v2/oauth/sign-in"] = "oauth/AuthenticationController/signin";
 
 $route['api-auth-login'] = 'auth/login';
 $route['api-auth-register'] = 'auth/register';
 
+$route["api/v2/blogs/category/add"] = "BlogsController/api_category_insert";
+$route["api/v2/blogs/tag/add"] = "BlogsController/api_tag_insert";
+$route["api/v2/blogs/tags/add"] = "BlogsController/api_tag_insert";
+$route["api/v2/blogs/category/get"] = "BlogsController/api_category_get";
+// $route["api/v2/blogs/category/add"] = "";
+
 $route['register'] = 'dashboard/register';
 
-$route[''] = 'dashboard/index';
+$route['/'] = 'dashboard/index';
 
 /* Blogs */
 $route['posts/all-blogs'] = 'BlogsController/home';

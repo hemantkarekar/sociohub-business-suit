@@ -13,6 +13,6 @@
 <!-- endinject -->
 
 <!-- Custom js for this page -->
-<script src="<?= base_url("assets") ?>/js/app.js"></script>
 <script src="<?= base_url("assets") ?>/js/dashboard-light.js"></script>
+<script src="<?= base_url("assets") ?>/js/app.js"></script>
 <!-- End custom js for this page -->

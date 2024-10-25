@@ -2,6 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 defined('APP_NAME') OR define('APP_NAME', 'SocioCMS');
+defined('APP_ID') OR define('APP_ID', 'vcdojtxev66laxb1');
 /*
 |--------------------------------------------------------------------------
 | Display Debug backtrace
