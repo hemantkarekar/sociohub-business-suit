@@ -506,9 +506,7 @@ $(function() {
       tooltip: {
         theme: 'light'
       },
-      colors: [
-        colors.primary
-      ],  
+      colors: [colors.primary],  
       fill: {
         opacity: .9
       } , 
