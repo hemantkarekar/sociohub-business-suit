@@ -14,9 +14,7 @@
 		"php": ">=5.3.7",
 		"setasign/fpdf": ">=1.8.6",
 		"clegginabox/pdf-merger": "dev-master",
-		"chillerlan/php-qrcode": ">=5.0.2",
-		"phpoffice/phpspreadsheet": "*",
-		"fpdf/fpdf": "*"
+		"chillerlan/php-qrcode": ">=5.0.2"
 	},
 	"suggest": {
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
